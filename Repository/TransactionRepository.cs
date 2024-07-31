@@ -8,6 +8,7 @@ public class TransactionRepository : ITransactionRepository
 {
     private const string JSON_FILE_PATH = "./logistikbude_exercise.json";
     
+    /// <inheritdoc/>
     public async Task<IEnumerable<CarrierLocation>> GetCarrierLocations(CancellationToken cToken)
     {
         var jsonStream = new FileStream(JSON_FILE_PATH, FileMode.Open);

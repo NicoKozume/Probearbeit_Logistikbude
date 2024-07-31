@@ -12,7 +12,7 @@ public class TransactionDataService : ITransactionDataService
         _transactionRepository = transactionRepository;
     }
 
-
+    /// <inheritdoc/>
     public async Task<IEnumerable<CarrierLocation>> GetTopThreeLocation(CancellationToken cToken)
     {
         var allTransaction = await _transactionRepository.GetCarrierLocations(cToken);
@@ -24,6 +24,7 @@ public class TransactionDataService : ITransactionDataService
         return topThreeLocations;
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<LocationAmount>> GetUnacceptedTransactions(CancellationToken cToken)
     {
         var allTransaction = await _transactionRepository.GetCarrierLocations(cToken);
@@ -41,6 +42,7 @@ public class TransactionDataService : ITransactionDataService
 
     }
 
+    /// <inheritdoc/>
     public async Task<IEnumerable<LocationBalance>> GetBalanceOfLocation(DateTime date, LoadCarrierType type, CancellationToken cToken)
     {
         var allTransaction = await _transactionRepository.GetCarrierLocations(cToken);
