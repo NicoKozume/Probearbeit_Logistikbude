@@ -18,5 +18,5 @@ public class TransactionDto
     /// <summary>
     /// Amount
     /// </summary>
-    public int Amount { get; set; }
+    public long Amount { get; set; }
 }
